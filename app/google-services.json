@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "870707151960",
+    "firebase_url": "https://touchofreality-bc926.firebaseio.com",
+    "project_id": "touchofreality-bc926",
+    "storage_bucket": "touchofreality-bc926.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870707151960:android:240756afb930d575",
+        "android_client_info": {
+          "package_name": "in.touchofreality.connectandgrow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870707151960-686nvkvm9ikm8kntaj1ddjnoviq0sq0l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.touchofreality.connectandgrow",
+            "certificate_hash": "66f7dd4d8503ccd1ba347ce190a6daf1ed889a54"
+          }
+        },
+        {
+          "client_id": "870707151960-t2bub56tf7grvklfeoqjra4fknke8ms5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZlQvH_FCebS1Buj5kEd9jRJmiQEPXj0s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870707151960-t2bub56tf7grvklfeoqjra4fknke8ms5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870707151960:android:eeb352cadbb4421a",
+        "android_client_info": {
+          "package_name": "in.touchofreality.motivateme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870707151960-233f037847pnfk79rvqtcs10a3rvshh1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.touchofreality.motivateme",
+            "certificate_hash": "66f7dd4d8503ccd1ba347ce190a6daf1ed889a54"
+          }
+        },
+        {
+          "client_id": "870707151960-t2bub56tf7grvklfeoqjra4fknke8ms5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZlQvH_FCebS1Buj5kEd9jRJmiQEPXj0s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870707151960-t2bub56tf7grvklfeoqjra4fknke8ms5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
