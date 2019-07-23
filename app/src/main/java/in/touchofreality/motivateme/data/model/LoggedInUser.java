@@ -5,18 +5,12 @@ package in.touchofreality.motivateme.data.model;
  */
 public class LoggedInUser {
 
-    private String userId;
     private String displayName;
     private String accessToken;
 
-    public LoggedInUser(String userId, String displayName, String accessToken) {
-        this.userId = userId;
+    public LoggedInUser(String displayName, String accessToken) {
         this.displayName = displayName;
         this.accessToken = accessToken;
-    }
-
-    public String getUserId() {
-        return userId;
     }
 
     public String getDisplayName() {
