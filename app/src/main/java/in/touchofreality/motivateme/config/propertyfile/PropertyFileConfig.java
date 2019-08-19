@@ -15,7 +15,7 @@ public class PropertyFileConfig implements Config {
     GRPCNetworkConfig grpcNetworkConfig;
 
     public static PropertyFileConfig getInstance(Context context) {
-        if (instance == null) {
+        if (instance == null && context != null) {
             instance = new PropertyFileConfig(context);
         }
         return instance;

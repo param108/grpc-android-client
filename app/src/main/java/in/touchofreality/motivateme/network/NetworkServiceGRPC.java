@@ -20,7 +20,9 @@ public class NetworkServiceGRPC implements NetworkService {
     private ManagedChannel managedChannel;
     private NetworkServiceGRPC(GRPCNetworkConfig config) {
         this.config = config;
-        managedChannel = ManagedChannelBuilder.forAddress(config.GRPCHost, Integer.parseInt(config.GRPCHost,10)).build();
+        managedChannel = ManagedChannelBuilder.forAddress(config.GRPCHost, Integer.parseInt(config.GRPCPort,10)).
+                useTransportSecurity().
+                build();
     }
 
     public static NetworkService getInstance(GRPCNetworkConfig config) {
