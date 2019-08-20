@@ -4,8 +4,10 @@ import android.app.Activity;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
@@ -30,6 +32,8 @@ import in.touchofreality.motivateme.network.NetworkServiceGRPC;
 import in.touchofreality.motivateme.pushmessaging.PushMessagingService;
 import in.touchofreality.motivateme.ui.login.LoginViewModel;
 import in.touchofreality.motivateme.ui.login.LoginViewModelFactory;
+import in.touchofreality.motivateme.ui.splash.SplashActivity;
+import in.touchofreality.motivateme.ui.thought.MainActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -43,6 +47,11 @@ public class LoginActivity extends AppCompatActivity {
     private void setupDependencies() {
             appConfig = PropertyFileConfig.getInstance(getApplicationContext());
             networkService = NetworkServiceGRPC.getInstance(appConfig.getGRPCNetworkConfig());
+    }
+
+    private void saveAccessToken(String token) {
+        SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.shared_preference_name), Context.MODE_PRIVATE);
+        sharedPreferences.edit().putString("token",token).commit();
     }
 
     @Override
@@ -87,11 +96,15 @@ public class LoginActivity extends AppCompatActivity {
                 }
                 if (loginResult.getSuccess() != null) {
                     updateUiWithUser(loginResult.getSuccess());
-                }
-                setResult(Activity.RESULT_OK);
+                    saveAccessToken(loginResult.getSuccess().getAccessToken());
+                    //Complete and destroy login activity once successful
+                    Intent mainIntent = new Intent(LoginActivity.this,
+                            MainActivity.class);
+                    //Intent is used to switch from one activity to another.
 
-                //Complete and destroy login activity once successful
-                finish();
+                    startActivity(mainIntent);
+                    finish();
+                }
             }
         });
 
